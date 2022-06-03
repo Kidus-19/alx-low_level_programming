@@ -30,7 +30,9 @@ int main(void)
 				}
 				else
 				{
-					putchar(sum);
+					putchar(i);
+					putchar(j);
+					putchar(k);
 					putchar(',');
 					putchar(' ');
 				}
