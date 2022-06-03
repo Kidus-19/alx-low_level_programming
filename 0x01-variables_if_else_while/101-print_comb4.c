@@ -11,7 +11,6 @@
 
 int main(void)
 {
-	int sum;
 	int i;
 	int j;
 	int k;
