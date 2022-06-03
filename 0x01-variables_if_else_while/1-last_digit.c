@@ -6,6 +6,7 @@
  * main -  will assign a random number to the variable n each time
  * it is executed. It finds the last digit of n a checks a condition
  * on it.
+ * Return: 0 (success)
  */
 int main(void)
 {
