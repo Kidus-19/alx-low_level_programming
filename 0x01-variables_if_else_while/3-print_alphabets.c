@@ -14,14 +14,17 @@ int main(void)
 
 	small = 'a';
 	cap = 'A';
-	while (small <= 'z')
+	while (cap <= 'Z' || small <= 'z')
 	{
-		putchar(small++);
+		if (small <= 'z')
+		{
+			putchar(small++);
+		}
+		else if (small > 'z' && cap <= 'Z')
+		{
+			putchar(cap++);
+		}
 	}
-	 while (cap <= 'Z')
-        {
-        	putchar(cap++);
-        }
 	putchar('\n');
 	return (0);
 }
