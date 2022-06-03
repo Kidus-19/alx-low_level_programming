@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /**
- * a program that prints all possible combinations of
+ * main - a program that prints all possible combinations of
  * single-digit numbers.Numbers must be separated by ,,
  * followed by a spaceNumbers should be printed
  * in ascending order
@@ -12,13 +12,13 @@ int main(void)
 {
 	int i;
 
-	i=48;
+	i = 48;
 	while (i <= 57)
 	{
 		putchar(i++);
-		if ( i== 57)
+		if (i == 57)
 		{
-			putchar('\n');
+			;
 		}
 		else
 		{
@@ -26,5 +26,6 @@ int main(void)
 			putchar(' ');
 		}
 	}
+	putchar('\n');
 	return (0);
 }
