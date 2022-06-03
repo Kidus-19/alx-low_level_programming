@@ -23,15 +23,15 @@ int main(void)
 			for (k = j + 1; k <= 57; k++)
 			{
 				sum = 100 * i + 10 * j + k;
+				putchar(i);
+				putchar(j);
+				putchat(k);
 				if (i == 55 && j == 56 && k == 57)
 				{
-					putchar(sum);
+					putchar(' ');
 				}
 				else
 				{
-					putchar(i);
-					putchar(j);
-					putchar(k);
 					putchar(',');
 					putchar(' ');
 				}
