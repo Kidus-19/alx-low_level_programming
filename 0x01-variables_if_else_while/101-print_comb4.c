@@ -25,7 +25,7 @@ int main(void)
 				sum = 100 * i + 10 * j + k;
 				putchar(i);
 				putchar(j);
-				putchat(k);
+				putchar(k);
 				if (i == 55 && j == 56 && k == 57)
 				{
 					putchar(' ');
