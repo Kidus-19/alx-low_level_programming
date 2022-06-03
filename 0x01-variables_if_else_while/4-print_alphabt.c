@@ -14,10 +14,13 @@ int main(void)
 	c = 'a';
 	while (c <= 'z')
 	{
-		if ((c != 'e') && (c != 'q'))
+		if (c != 'e')
 		{
+			if (c != 'q')
+			{
 			putchar(c);
 			c = c + 1;
+			}
 		}
 	}
 	putchar('\n');
