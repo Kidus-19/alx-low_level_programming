@@ -16,14 +16,14 @@ int main(void)
 	int j;
 	int k;
 
-	for (i = 0; i <= 7; i++)
+	for (i = 48; i <= 55; i++)
 	{
-		for (j = i + 1; j <= 8; j++)
+		for (j = i + 1; j <= 56; j++)
 		{
-			for (k = j + 1; k <= 9; k++)
+			for (k = j + 1; k <= 57; k++)
 			{
 				sum = 100 * i + 10 * j + k;
-				if (i == 7 && j == 8 && k == 9)
+				if (i == 55 && j == 56 && k == 57)
 				{
 					putchar(sum);
 					putchar(' ');
