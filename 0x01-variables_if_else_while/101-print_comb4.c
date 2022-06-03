@@ -21,7 +21,6 @@ int main(void)
 		{
 			for (k = j + 1; k <= 57; k++)
 			{
-				sum = 100 * i + 10 * j + k;
 				putchar(i);
 				putchar(j);
 				putchar(k);
