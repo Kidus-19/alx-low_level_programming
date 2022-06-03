@@ -26,7 +26,6 @@ int main(void)
 				if (i == 55 && j == 56 && k == 57)
 				{
 					putchar(sum);
-					putchar(' ');
 				}
 				else
 				{
