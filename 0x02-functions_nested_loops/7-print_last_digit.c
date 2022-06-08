@@ -3,11 +3,14 @@
 /**
  * print_last_digit - prints last digit
  * @d: input number
- * Return: d
+ * Return: n
  */
 
 int print_last_digit(int d)
 {
-	d = d % 10;
-	return (d);
+	int n;
+
+	n = d % 10;
+	n = n * 10 + d;
+	return (n);
 }
