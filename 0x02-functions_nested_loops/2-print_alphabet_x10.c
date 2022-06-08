@@ -1,4 +1,4 @@
-#include "2-main.c"
+#include "main.h"
 
 /**
  * print_alphabet_x10 - prints a-z 10X
