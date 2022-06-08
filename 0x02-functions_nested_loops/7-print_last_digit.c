@@ -13,6 +13,6 @@ int print_last_digit(int d)
 	n = 0;
 	if (d != 0)
 	n = d % 10;
-	_putchar(n);
+	_putchar(n + 48);
 	return (n);
 }
