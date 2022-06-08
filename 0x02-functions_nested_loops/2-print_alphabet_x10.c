@@ -1,5 +1,9 @@
 #include "2-main.c"
 
+/**
+ * print_alphabet_x10 - prints a-z 10X
+ */
+
 void print_alphabet_x10(void)
 {
 	int i;
