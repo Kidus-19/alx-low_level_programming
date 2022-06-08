@@ -6,7 +6,7 @@
  * Return: c
  */
 
-int _abs(int i)
+int _abs(int c)
 {
 	if (c < 0 )
 		c = - c;
