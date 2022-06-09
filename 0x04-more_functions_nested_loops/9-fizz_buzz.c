@@ -25,5 +25,6 @@ int main(void)
 		else
 			printf("%d ", i);
 	}
-	put('\n');
+	putchar('\n');
+	return (0);
 }
