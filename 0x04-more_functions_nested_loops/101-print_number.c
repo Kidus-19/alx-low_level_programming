@@ -37,7 +37,6 @@ void print_number(int n)
 			sum = sum / 10;
 		}
 	}
-	_putchar('\n');
 }
 
 /**
