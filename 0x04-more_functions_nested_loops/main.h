@@ -1,3 +1,6 @@
+#ifndef MAIN_H
+#define MAIN_H
+
 int _putchar(char c);
 int _isupper(int c);
 int _isdigit(int c);
@@ -13,3 +16,5 @@ void print_number(int n);
 int _pow(int digits);
 int _sum(int n, int digits);
 int _nodigits(int n);
+
+#endif /* MAIN_H */
