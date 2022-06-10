@@ -11,9 +11,11 @@ void print_number(int n)
 	int digits;
 	int rem;
 
-	if (n == 0)
-		_putchar(48);
-	else if (n < 0)
+	/**
+	 * if (n == 0)
+	 * _putchar(48);
+	 */
+	if (n < 0)
 	{
 		n = -n;
 		_putchar('-');
