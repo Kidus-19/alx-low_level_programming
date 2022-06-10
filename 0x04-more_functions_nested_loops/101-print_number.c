@@ -18,7 +18,6 @@ void print_number(int n)
 		n = -n;
 		digits = _nodigits(n);
 		sum = _sum(n, digits);
-		_putchar('-');
 		while (sum != 0)
 		{
 			rem = sum % 10;
