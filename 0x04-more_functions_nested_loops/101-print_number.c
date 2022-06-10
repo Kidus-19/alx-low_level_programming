@@ -16,6 +16,7 @@ void print_number(int n)
 	else if (n < 0)
 	{
 		n = -n;
+		_putchar('-');
 		digits = _nodigits(n);
 		sum = _sum(n, digits);
 		while (sum != 0)
