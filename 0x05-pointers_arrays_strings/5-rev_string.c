@@ -14,7 +14,7 @@ void rev_string(char *s)
 
 	j = 0;
 	len = _strlen(s);
-	s2[len];
+	s2[len] = " ";
 	for (i = len - 1; i >= 0; i--)
 	{
 		s2[j++] = s[i];
