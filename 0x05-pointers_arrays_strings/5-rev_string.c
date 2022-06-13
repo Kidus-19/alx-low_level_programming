@@ -5,7 +5,7 @@
  * @s: char pointer
  */
 
-void rev_string(char *s);
+void rev_string(char *s)
 {
 	int i;
 	int j;
