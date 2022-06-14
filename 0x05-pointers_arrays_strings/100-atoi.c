@@ -21,7 +21,7 @@ int _atoi(char *s)
 		{
 			idx1 = i;
 		}
-		if (i != 0 && s[i-1] == '-')
+		if (i != 0 && s[i - 1] == '-')
 			sign = true;
 		break;
 	}
@@ -32,13 +32,14 @@ int _atoi(char *s)
 			idx2 = i;
 			break;
 		}
-		else{
+		else
+		{
 			idx2 = i;
 		}
 	}
 	if (sign)
-		_putchar('\n');
-	for(i = idx1; i < idx2; i++)
+		_putchar('-');
+	for (i = idx1; i < idx2; i++)
 		_putchar(i + 48);
 	_putchar('\n');
 }
@@ -53,4 +54,23 @@ int _atoi(char *s)
 int _putchar(char c)
 {
 	return (write(1, &c, 1));
+}
+
+/**
+ * _strlen - returns the length of the string
+ * @s: string
+ * Return: counter
+ */
+
+int _strlen(char *s)
+{
+	int counter;
+	int i;
+
+	counter = 0;
+	for (i = 0; s[i] != '\0'; i++)
+	{
+		counter++;
+	}
+	return (counter);
 }
