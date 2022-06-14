@@ -29,15 +29,14 @@ int _atoi(char *s)
 	}
 	for (i = idx1; i < len; i++)
 	{
-		if (!(s[i] >= 48 || s[i] <= 57))
+		if (s[i] >= 48 || s[i] <= 57)
+			;
+		else
 		{
 			idx2 = i;
 			break;
 		}
-		else
-		{
-			idx2 = i;
-		}
+		idx2 = i;
 	}
 	pow = idx2 - idx1 - 1;
 	for (i = idx1; i < idx2; i++)
