@@ -3,6 +3,7 @@
 /**
  * _atoi - filters the number out from a string
  * @s: input string
+ * Return: sum
  */
 
 int _atoi(char *s)
@@ -12,15 +13,16 @@ int _atoi(char *s)
 	int i;
 	bool sign;
 	int len;
+	int sum;
+	int pow;
 
+	sum = 0;
 	len = _strlen(s);
 	sign = false;
 	for (i = 0; i < len; i++)
 	{
 		if (s[i] >= 48 || s[i] <= 57)
-		{
 			idx1 = i;
-		}
 		if (i != 0 && s[i - 1] == '-')
 			sign = true;
 		break;
@@ -37,11 +39,33 @@ int _atoi(char *s)
 			idx2 = i;
 		}
 	}
-	if (sign)
-		_putchar('-');
+	pow = idx2 - idx1 - 1;
 	for (i = idx1; i < idx2; i++)
-		_putchar(i + 48);
-	_putchar('\n');
+	{
+		sum += (s[i] - '\0') * _pow(pow);
+	}
+	if (sign)
+		sum = -sum;
+	return (sum);
+}
+
+/**
+ * _pow - computes the pow of 10
+ * @pow: computes pow;
+ * Return: product
+ */
+
+int _pow(int pow)
+{
+	int product;
+	int i;
+
+	product =  1;
+	for (i = 0; i < pow; i++)
+	{
+		product *= 10;
+	}
+	return (product);
 }
 
 /**
