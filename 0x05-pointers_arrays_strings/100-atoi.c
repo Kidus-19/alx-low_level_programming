@@ -11,25 +11,25 @@ int _atoi(char *s)
 	int idx1;
 	int idx2;
 	int i;
-	bool sign;
+	int sign;
 	int len;
 	int sum;
 	int pow;
 
 	sum = 0;
 	len = _strlen(s);
-	sign = false;
+	sign = 0;
 	for (i = 0; i < len; i++)
 	{
 		if (s[i] >= 48 || s[i] <= 57)
 			idx1 = i;
 		if (i != 0 && s[i - 1] == '-')
-			sign = true;
+			sign = 1;
 		break;
 	}
 	for (i = idx1; i < len; i++)
 	{
-		if !(s[i] >= 48 || s[i] <= 57)
+		if (!(s[i] >= 48 || s[i] <= 57))
 		{
 			idx2 = i;
 			break;
@@ -66,18 +66,6 @@ int _pow(int pow)
 		product *= 10;
 	}
 	return (product);
-}
-
-/**
- * _putchar - writes the character c to stdout
- * @c: The character to print
- *
- * Return: On success 1.
- * On error, -1 is returned, and errno is set appropriately.
- */
-int _putchar(char c)
-{
-	return (write(1, &c, 1));
 }
 
 /**
