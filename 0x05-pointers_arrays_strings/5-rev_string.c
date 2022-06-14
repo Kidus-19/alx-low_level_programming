@@ -13,12 +13,14 @@ void rev_string(char *s)
 	char temp1;
 
 	len = _strlen(s);
-	j = len - 1;
+	j = 0;
 
-	for (i = 0; i < len / 2 - 1; i++)
+	for (i = len; i > len / 2; i--)
 	{
+		_putchar(i + 48);
+		_putchar(' ');
 		temp1 = s[i];
-		s[i] = s[j--];
+		s[i] = s[j++];
 		s[j] = temp1;
 
 	}
