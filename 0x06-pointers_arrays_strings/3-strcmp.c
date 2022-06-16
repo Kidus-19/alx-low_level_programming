@@ -27,6 +27,13 @@ int _strcmp(char *s1, char *s2)
 		{
 			if (len_s2 == len_s1)
 				res = 0;
+			else
+			{
+				if (len_s1 - len_s2 > 0)
+					res = 1;
+				else
+					res = -1;
+			}
 		}
 		else if (s1[i] > s2[i])
 		{
