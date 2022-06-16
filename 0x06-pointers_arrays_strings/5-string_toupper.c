@@ -1,5 +1,11 @@
 #include "main.h"
 
+/**
+ * _toupper - to upper case.
+ * @str: string parameter.
+ * Return str
+ */
+
 char *string_toupper(char *str)
 {
 	int i;
@@ -8,9 +14,10 @@ char *string_toupper(char *str)
 	len = _strlen(str);
 	for (i = 0; i < len; i++)
 	{
-		if(str[i] >= 65 && str[i] < 91)
-			str[i] = str[i] + 32;
+		if (str[i] >= 97 && str[i] < 123)
+			str[i] = str[i] - 32;
 	}
+	return (str);
 }
 
 /**
