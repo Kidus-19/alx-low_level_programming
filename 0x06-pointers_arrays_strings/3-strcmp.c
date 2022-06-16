@@ -30,19 +30,19 @@ int _strcmp(char *s1, char *s2)
 			else
 			{
 				if (len_s1 - len_s2 > 0)
-					res = 15;
+					res = s1[i] - s2[i];
 				else
-					res = -15;
+					res = s1[i] - s2[i];
 			}
 		}
 		else if (s1[i] > s2[i])
 		{
-			res = 15;
+			res = s1[i] - s2[i];
 			break;
 		}
 		else if (s2[i] > s1[i])
 		{
-			res = -15;
+			res = s1[i] - s2[i];
 			break;
 		}
 	}
