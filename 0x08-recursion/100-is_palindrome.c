@@ -51,6 +51,6 @@ int _isPal(char *start, char *ends)
 	{
 		start++;
 		ends--;
+		return (_isPal(start, ends));
 	}
-	return (0);
 }
