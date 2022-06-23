@@ -20,6 +20,7 @@ int is_prime_number(int n)
 	{
 		return (0);
 	}
+	m = n;
 	return ((_numFactors(m, n) <= 2) ? 1 : 0);
 }
 
