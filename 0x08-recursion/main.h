@@ -8,3 +8,4 @@ int _sqrt_recursion(int n);
 int is_prime_number(int n);
 int _strlen(char *s);
 int _isPal(char *start, char *ends);
+int _numFactors(int m, int n);

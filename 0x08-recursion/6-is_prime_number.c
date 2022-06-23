@@ -10,14 +10,32 @@
 
 int is_prime_number(int n)
 {
+	int m;
+
 	if (n < 0)
 		n = -n;
+	m = n;
+	return ((_numFactors(m, n) > 2) ? 1 : 0);
+}
+
+/**
+ * _numFactors - counts the factors of a number.
+ * @m: copy of the given number
+ * @n: original number.
+ * Return: count
+ */
+int _numFactors(int m, int n)
+{
 	if (n == 1)
 	{
 		return (1);
 	}
+	else if (m % n == 0)
+	{
+		return (1 + _numFactors(m, --n));
+	}
 	else
 	{
-		return (((n % 2 == 0) ? 1 : 0) + is_prime_number(--n));
+		return (0 + _numFactors(m, --n));
 	}
 }
