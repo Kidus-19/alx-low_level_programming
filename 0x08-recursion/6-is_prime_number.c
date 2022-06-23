@@ -5,7 +5,7 @@
  * if the input integer is a prime number,
  * otherwise return 0.
  * @n: integer input.
- * Return: status 1(success), otherwise (0)
+ * Return: status 1(success), otherwiise (0)
  */
 
 int is_prime_number(int n)
