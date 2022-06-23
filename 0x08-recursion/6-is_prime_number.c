@@ -12,13 +12,14 @@ int is_prime_number(int n)
 {
 	int m;
 
-	if (n == 1 || n == -1)
+	if (n == 1)
 	{
 		return (0);
 	}
 	else if (n < 0)
-		n = -n;
-	m = n;
+	{
+		return (0);
+	}
 	return ((_numFactors(m, n) <= 2) ? 1 : 0);
 }
 
