@@ -18,7 +18,7 @@ char *str_concat(char *s1, char *s2)
 	char *concat;
 
 	j = 0;
-	if (s1 && s2)
+	if (s1 || s2)
 	{
 		len1 = _strlen(s1) - 1;
 		len2 = _strlen(s2);
