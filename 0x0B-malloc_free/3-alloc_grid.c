@@ -38,11 +38,14 @@ int **alloc_grid(int width, int height)
 		}
 	}
 	i = 0;
-	for (i = 0; i < height; i++)
+	if (numGrid)
 	{
-		for (j = 0; j < width; j++)
+		for (i = 0; i < height; i++)
 		{
-			numGrid[i][j] = 0;
+			for (j = 0; j < width; j++)
+			{
+				numGrid[i][j] = 0;
+			}
 		}
 	}
 	return (numGrid);
