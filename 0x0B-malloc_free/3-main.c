@@ -41,8 +41,8 @@ int main(void)
 	int h;
 	int w;
 
-	h = 12;
-	w = 12;
+	h = 20;
+	w = 20;
 	grid = alloc_grid(h, w);
 	if (grid == NULL)
 	{
@@ -50,10 +50,6 @@ int main(void)
 	}
 	print_grid(grid, h, w);
 	printf("\n");
-	/*
-	grid[2][4] = 98;
-	grid[9][3] = 402;
-	*/
-	print_grid(grid, h, w);
+	free(grid);
 	return (0);
 }
