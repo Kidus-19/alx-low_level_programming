@@ -11,6 +11,7 @@
 
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
+	int i;
 	void *memLoc;
 
 	if (nmemb == 0 || size == 0)
