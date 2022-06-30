@@ -44,7 +44,7 @@ int _strlen(char *str)
 
 	if (str)
 	{
-		len = 0;
+		len = 1;
 		for (i = 0; str[i] != '\0'; i++)
 		{
 			len++;
