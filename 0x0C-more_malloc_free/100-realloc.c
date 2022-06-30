@@ -26,7 +26,7 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 			return (newPtr);
 		}
 	}
-	if (ptr == '\0')
+	if (*(int *)ptr == '\0')
 	{
 		newPtr = malloc(new_size);
 		if (newPtr)
@@ -34,9 +34,7 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 			return (newPtr);
 		}
 	}
-	if (new_size == 0 && ptr != '\0')
-	{
+	if (new_size == 0 && *(int *)ptr != '\0')
 		free(ptr);
-		return ('\0');
-	}
+	return ('\0');
 }
