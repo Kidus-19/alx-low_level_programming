@@ -51,10 +51,14 @@ int _strlen(char *str)
 	int i;
 	int len;
 
-	len = 1;
-	for (i = 0; str[i] != '\0'; i++)
+	if (str)
 	{
-		len++;
+		len = 1;
+		for (i = 0; str[i] != '\0'; i++)
+		{
+			len++;
+		}
+		return (len);
 	}
-	return (len);
+	return ('\0');
 }
