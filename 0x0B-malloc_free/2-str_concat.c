@@ -31,7 +31,7 @@ char *str_concat(char *s1, char *s2)
 			}
 			for (; i < len1 + len2; i++)
 			{
-				concat[i] = s2[j++];
+				//concat[i] = s2[j++];
 			}
 			concat[i] = '\0';
 			return (concat);
@@ -51,14 +51,11 @@ int _strlen(char *str)
 	int i;
 	int len;
 
-	if (str)
+	len = 1;
+	for (i = 0; str[i] != '\0'; i++)
 	{
-		len = 1;
-		for (i = 0; str[i] != '\0'; i++)
-		{
-			len++;
-		}
-		return (len);
+		len++;
 	}
-	return ('\0');
+	return (len);
+	
 }
