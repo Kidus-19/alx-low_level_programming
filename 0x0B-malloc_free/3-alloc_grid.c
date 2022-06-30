@@ -21,34 +21,29 @@ int **alloc_grid(int width, int height)
 		return ('\0');
 	}
 	numGrid = (int **)(malloc(sizeof(int *) * (height)));
-	for (i = 0; i < height; i++)
-	{
-		numGrid[i] = (int *)(malloc(sizeof(int) * width));
-		if (!numGrid[i])
-		{
-			for (k = 0; k <= i; k++)
-			{
-				free(numGrid[k]);
-			}
-			free(numGrid);
-			break;
-		}
-	}
-	i = 0;
 	if (numGrid)
 	{
 		for (i = 0; i < height; i++)
 		{
-			for (j = 0; j < width; j++)
+			numGrid[i] = (int *)(malloc(sizeof(int) * width));
+			if (!numGrid[i])
 			{
-				numGrid[i][j] = 0;
+				for (k = 0; k <= i; k++)
+				{
+					free(numGrid[k]);
+				}
+				free(numGrid);
+				break;
 			}
 		}
-		return (numGrid);
 	}
-	else
+	i = 0;
+	for (i = 0; i < height; i++)
 	{
-		free(numGrid);
+		for (j = 0; j < width; j++)
+		{
+			numGrid[i][j] = 0;
+		}
 	}
-		return (numGrid);
+	return (numGrid);
 }
