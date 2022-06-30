@@ -1,6 +1,7 @@
 #include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 /**
  * main - check the code
@@ -11,8 +12,8 @@ int main(void)
 {
 	char *concat;
 
-	concat = string_nconcat("hello", NULL, 6);
-	printf("%s\n", concat);
+	concat = string_nconcat("hello", " methe dnfk", 5);
+	printf("%s %lu\n", concat, strlen(concat));
 	free(concat);
 	return (0);
 }
