@@ -23,16 +23,19 @@ char *str_concat(char *s1, char *s2)
 		len1 = _strlen(s1) - 1;
 		len2 = _strlen(s2);
 		concat = (char *)(malloc(sizeof(char) * (len1 + len2)));
-		for (i = 0; i < len1; i++)
+		if (conat)
 		{
-			concat[i] = s1[i];
+			for (i = 0; i < len1; i++)
+			{
+				concat[i] = s1[i];
+			}
+			for (; i < len1 + len2; i++)
+			{
+				concat[i] = s2[j++];
+			}
+			concat[i] = '\0';
+			return (concat);
 		}
-		for (; i < len1 + len2; i++)
-		{
-			concat[i] = s2[j++];
-		}
-		concat[i] = '\0';
-		return (concat);
 	}
 	return ('\0');
 }
