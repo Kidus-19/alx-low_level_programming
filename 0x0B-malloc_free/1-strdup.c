@@ -15,16 +15,20 @@ char *_strdup(char *str)
 	int i;
 	int len;
 
-	len = _strlen(str);
-	nstr = (char *)(malloc(len * sizeof(char)));
-	if (nstr)
+	if (str)
 	{
-		for (i = 0; i < len; i++)
+		len = _strlen(str);
+		nstr = (char *)(malloc(len * sizeof(char)));
+		if (nstr)
 		{
-			nstr[i] = str[i];
+			for (i = 0; i < len; i++)
+			{
+				nstr[i] = str[i];
+			}
 		}
+		return (nstr);
 	}
-	return (nstr);
+	return ('\0');
 }
 
 /**
@@ -38,10 +42,14 @@ int _strlen(char *str)
 	int len;
 	int i;
 
-	len = 0;
-	for (i = 0; str[i] != '\0'; i++)
+	if (str)
 	{
-		len++;
+		len = 0;
+		for (i = 0; str[i] != '\0'; i++)
+		{
+			len++;
+		}
+		return (len);
 	}
-	return (len);
+	return ('\0');
 }
