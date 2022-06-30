@@ -20,6 +20,10 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	memLoc = malloc(nmemb * size);
 	if (memLoc)
 	{
+		for (i = 0; i < nmemb; i++)
+		{
+			memLoc[i] = 0;
+		}
 		return (memLoc);
 	}
 	return ('\0');
