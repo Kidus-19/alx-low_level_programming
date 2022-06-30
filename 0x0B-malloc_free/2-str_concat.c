@@ -25,11 +25,11 @@ char *str_concat(char *s1, char *s2)
 		concat = (char *)(malloc(sizeof(char) * (len1 + len2)));
 		for (i = 0; i < len1; i++)
 		{
-			concat[i] = s1[i]
+			concat[i] = s1[i];
 		}
 		for (; i < len1 + len2; i++)
 		{
-			concat[i] = s2[j++]
+			concat[i] = s2[j++];
 		}
 		return (concat);
 	}
