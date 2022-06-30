@@ -42,7 +42,8 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		}
 		return (concat);
 	}
-	return ('\0');
+	free(concat);
+	return (concat);
 }
 
 /**
