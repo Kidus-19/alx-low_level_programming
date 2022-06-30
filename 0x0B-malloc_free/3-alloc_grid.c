@@ -20,12 +20,19 @@ int **alloc_grid(int width, int height)
 		return ('\0');
 	}
 	numGrid = (int **)(malloc(sizeof(int) * (width * height)));
-	for (i = 0; i < height; i++)
+	if (numGrid)
 	{
-		for (j = 0; j < width; j++)
+		for (i = 0; i < height; i++)
 		{
-			numGrid[i][j] = 0;
+			for (j = 0; j < width; j++)
+			{
+				numGrid[i][j] = 0;
+			}
 		}
 	}
-	return (numGrid);
+	else
+	{
+		free(numGrid);
+	}
+		return (numGrid);
 }
