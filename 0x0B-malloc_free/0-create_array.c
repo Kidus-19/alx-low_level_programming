@@ -12,18 +12,22 @@
 
 char *create_array(unsigned int size, char c)
 {
-	char *str = (char *)(malloc(size * sizeof(char)));
+	char *str;
 	unsigned int i;
 
-	if (size == 0)
+	str = (char *)(malloc(size * sizeof(char)));
+	if (str)
 	{
-		return ('\0');
-	}
-	else
-	{
-		for (i = 0; i < size; i++)
+		if (size == 0)
 		{
-			str[i] = c;
+			return ('\0');
+		}
+		else
+		{
+			for (i = 0; i < size; i++)
+			{
+				str[i] = c;
+			}
 		}
 	}
 	return (str);
