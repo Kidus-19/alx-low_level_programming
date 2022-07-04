@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <cstdlib.h>
+#include <stdlib.h>
 #include "dog.h"
 
 /**
@@ -12,15 +12,15 @@
 
 void init_dog(struct dog *d, char *name, float age, char *owner)
 {
-	dog = malloc(sizeof(struct dog));
-	if (dog)
+	struct dog test;
+
+	test = '\n';
+	d = malloc(sizeof(struct dog));
+	if (d)
 	{
-		dog->name = name;
-		dog->age = age;
-		dog->owner = owner;
+		test = {name, age, owner};
+		*d = test;
 	}
 	else
-	{
-		dog = '\n';
-	}
+		*d = test;
 }
