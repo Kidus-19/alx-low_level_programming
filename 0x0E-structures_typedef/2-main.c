@@ -11,7 +11,7 @@ int main(void)
 	struct dog my_dog;
 
 	my_dog.name = '\0';
-	my_dog.age = '\0';
+	my_dog.age = 25;
 	my_dog.owner = '\0';
 	print_dog(&my_dog);
 	return (0);
