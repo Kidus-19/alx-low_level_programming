@@ -8,7 +8,7 @@
  * Return: integer
  */
 
-int (*get_op_func(char *s))(int, int)
+int (*get_op_func(char *s))(int a, int b)
 {
 	op_t ops[] = {
 		{"+", op_add},
@@ -18,14 +18,13 @@ int (*get_op_func(char *s))(int, int)
 		{"%", op_mod},
 		{NULL, NULL}
 	};
-	int i;
+	int i = 0;
 
-	int (*get_op_func(char *s))(int, int) = {op_add,
-	       	op_sub, op_mul, op_div, op_mod};
-	if (i < 6)
+	while (i < 10)
 	{
-		get_op_func(ops[i])(a, b);
-		return (ops[i]);
+		if (s[0] == ops->op[i])
+			break;
+		i++;
 	}
-	return (NULL);
+	return (ops[i / 2].f);
 }
