@@ -1,0 +1,43 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdarg.h>
+#include "variadic_functions.h"
+
+/**
+ * print_all - prints all inputs
+ * @format: const char * const
+ */
+
+void print_all(const char * const format, ...)
+{
+	int i;
+	va_list list;
+	char *check, *temp;
+
+	check = format;
+	va_start(list, check);
+	while (*check)
+	{
+		switch (*check)
+		{
+			case 'c':
+				printf("%c, ", va_arg(list, int));
+			break;
+			case 'i':
+				printf("%d, ", va_arg(list, int));
+			break;
+			case 'f':
+				printf("%f, ", va_arg(list, double));
+			break;
+			case 's':
+			{
+				temp = va_arg(list, char *);
+				if (temp)
+					printf("%s, ", temp);
+				else
+					printf("(nil), ");
+			}
+			check++;
+		}
+	}
+}

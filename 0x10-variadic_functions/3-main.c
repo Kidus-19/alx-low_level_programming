@@ -8,6 +8,6 @@
 
 int main(void)
 {
-	print_numbers(", ", 1, 10);
+	print_all("ceis", 'B', 3, "stSchool");
 	return (0);
 }
