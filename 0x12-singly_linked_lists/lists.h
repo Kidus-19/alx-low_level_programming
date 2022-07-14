@@ -23,5 +23,6 @@ typedef struct list_s
 #define PROTOTYPE_H
 
 int _putchar(char c);
+size_t print_list(const list_t *h);
 
 #endif /* PROTOTYPE_H */
