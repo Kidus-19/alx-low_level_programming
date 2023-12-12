@@ -1,5 +1,4 @@
 #include "search_algos.h"
-int logn_value(int size);
 void print_subArray(int *array, int left, int right);
 
 /**
@@ -11,16 +10,15 @@ void print_subArray(int *array, int left, int right);
  */
 int binary_search(int *array, size_t size, int value)
 {
-	int l, mid, r, i, logn;
+	int l, mid, r;
 
 	l = 0;
-	r = (int)size;
+	r = (int)size - 1;
 	mid = (l + r) / 2;
-	logn = logn_value(size);
 
 	if (array == NULL)
 		return (-1);
-	for (i = 0; i < logn; i++)
+	while (l < r)
 	{
 		print_subArray(array, l, r);
 		if (array[mid] == value)
@@ -40,24 +38,6 @@ int binary_search(int *array, size_t size, int value)
 }
 
 /**
- * logn_value - finds the log value to the base 2 on size.
- * @size: the number of array elements.
- * Return: logn
- */
-int logn_value(int size)
-{
-	int logn;
-
-	logn = 0;
-	while (size > 1)
-	{
-		size /= 2;
-		logn++;
-	}
-	return (logn);
-}
-
-/**
  * print_subArray - prints sub array.
  * @array: points to the first element of the array.
  * @left: the first element of the sub array.
@@ -68,7 +48,7 @@ void print_subArray(int *array, int left, int right)
 	int i;
 
 	printf("Searching in array: ");
-	for (i = left; i < right - 1; i++)
+	for (i = left; i < right; i++)
 	{
 		printf("%d, ", array[i]);
 	}
