@@ -14,12 +14,12 @@ int binary_search(int *array, size_t size, int value)
 
 	l = 0;
 	r = (int)size - 1;
-	mid = (l + r) / 2;
 
 	if (array == NULL)
 		return (-1);
-	while (l < r)
+	while (l <= r)
 	{
+		mid = (l + r) / 2;
 		print_subArray(array, l, r);
 		if (array[mid] == value)
 		{
@@ -27,11 +27,9 @@ int binary_search(int *array, size_t size, int value)
 		} else if (value > array[mid])
 		{
 			l = mid + 1;
-			mid = (l + r) / 2;
 		} else if (value < array[mid])
 		{
 			r = mid - 1;
-			mid = (l + r) / 2;
 		}
 	}
 	return (-1);
